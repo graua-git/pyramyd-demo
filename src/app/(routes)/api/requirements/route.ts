@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { NextRequest, NextResponse } from "next/server";
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const filePath = path.join(process.cwd(), 'src/app/db.json');
 
@@ -44,7 +45,6 @@ export async function POST(req: NextRequest) {
     if (prompt === "") return NextResponse.json({ error: "Please enter a prompt" }, { status: 400 });
   
     // Get LLM response
-    const { GoogleGenerativeAI } = require("@google/generative-ai");
     const genAI = new GoogleGenerativeAI(key);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const response = await model.generateContent(initialPrompt + prompt);
