@@ -1,5 +1,5 @@
 "use client";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../state/store";
 import { RequirementsCard } from "./RequirementsCard";
 
