@@ -3,6 +3,9 @@
 ## Project Overview  
 This web application allows users to input software requirements into a text area. It processes the input using an LLM (Google Gemini API) to extract structured information, which is then displayed in a table. The app uses a **credit-based system**, where users start with **20 credits**, and each processed requirement consumes **1 credit**. Once the credits run out, users are prompted with a message indicating they've reached the limit.
 
+## Deployed Link
+https://pyramyd-demo.vercel.app/
+
 ## Tech Stack  
 ### **Frontend:**  
 - **Next.js** – A React framework for building the UI and handling API routes.  
