@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const filePath = path.join(process.cwd(), 'src/app/db.json');
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   /*
   Retrieves number of credits remaining
 
